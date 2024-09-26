@@ -1,3 +1,9 @@
+# Ignore cache and temporary files
 __pycache__/
 *.pyc
 *.pyo
+.cache/
+.vscode/
+.DS_Store
+.idea/
+*.log
