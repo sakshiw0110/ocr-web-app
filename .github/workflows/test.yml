@@ -19,14 +19,13 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'  # Change to your required version
+        python-version: '3.8'  # Adjust to your project's Python version
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # Ensure you have a requirements.txt file
+        pip install -r requirements.txt
 
     - name: Run tests
       run: |
-        pytest  # Adjust if you're using a different testing framework
-
+        pytest --maxfail=1 --disable-warnings -q  # Adjust according to your testing framework and needs
