@@ -1,3 +1,4 @@
-gradio
 pytesseract
-pillow
+Pillow
+gradio
+regex
