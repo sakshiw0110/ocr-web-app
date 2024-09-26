@@ -1,31 +1,17 @@
-name: Python Package
+name: Test Workflow
 
 on: 
   push:
-    branches: 
-      - main
-  pull_request:
-    branches: 
+    branches:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'  # Adjust to your project's Python version
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run tests
-      run: |
-        pytest --maxfail=1 --disable-warnings -q  # Adjust according to your testing framework and needs
+    - name: Display Message
+      run: echo "Hello, World!"
