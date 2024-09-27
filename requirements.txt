@@ -1,4 +1,5 @@
+streamlit
 pytesseract
-Pillow
-gradio
-regex
+numpy
+pandas
+pillow
